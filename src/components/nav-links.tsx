@@ -10,7 +10,22 @@ import {
   SidebarMenuSubButton,
 } from "./ui/sidebar";
 
-const data = {
+interface NavItem {
+  title: string;
+  url: string;
+}
+
+export interface NavSection {
+  title: string;
+  url: string;
+  items?: NavItem[];
+}
+
+export interface NavData {
+  navMain: NavSection[];
+}
+
+export const navData: NavData = {
   navMain: [
     {
       title: "Getting Started",
@@ -18,7 +33,7 @@ const data = {
       items: [
         {
           title: "Home",
-          url: "/",
+          url: "/home",
         },
         {
           title: "Dashboard",
@@ -28,11 +43,11 @@ const data = {
     },
     {
       title: "Building Your Application",
-      url: "/page",
+      url: "/build",
       items: [
         {
-          title: "Page",
-          url: "/page",
+          title: "Routing",
+          url: "/build/routing",
         },
       ],
     },
@@ -44,7 +59,7 @@ export function NavLinks() {
 
   return (
     <>
-      {data.navMain.map((item) => (
+      {navData.navMain.map((item) => (
         <SidebarMenuItem key={item.title}>
           <SidebarMenuButton asChild>
             <Link href={item.url} prefetch={false} className="font-medium">
