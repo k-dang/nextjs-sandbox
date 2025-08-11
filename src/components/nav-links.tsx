@@ -32,8 +32,8 @@ export const navData: NavData = {
       url: "/",
       items: [
         {
-          title: "Home",
-          url: "/home",
+          title: "PPR",
+          url: "/ppr",
         },
         {
           title: "Dashboard",

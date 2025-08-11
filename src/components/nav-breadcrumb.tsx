@@ -14,12 +14,12 @@ import { navData, NavSection } from "./nav-links";
 function findBreadCrumb(navMain: NavSection[], path: string) {
   for (const nav of navMain) {
     if (nav.url === path) {
-      return { parent: nav.title, child: null };
+      return { parent: nav, child: null };
     }
 
     for (const item of nav.items || []) {
       if (item.url === path) {
-        return { parent: nav.title, child: item.title };
+        return { parent: nav, child: item };
       }
     }
   }
@@ -31,17 +31,21 @@ export function NavBreadcrumb() {
   const pathname = usePathname();
   const { parent, child } = findBreadCrumb(navData.navMain, pathname);
 
+  if (!parent) {
+    return null;
+  }
+
   return (
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem className="hidden md:block">
-          <BreadcrumbLink href="#">{parent}</BreadcrumbLink>
+          <BreadcrumbLink href={parent.url}>{parent?.title}</BreadcrumbLink>
         </BreadcrumbItem>
         {child != null && (
           <>
             <BreadcrumbSeparator className="hidden md:block" />{" "}
             <BreadcrumbItem>
-              <BreadcrumbPage>{child}</BreadcrumbPage>
+              <BreadcrumbPage>{child.title}</BreadcrumbPage>
             </BreadcrumbItem>
           </>
         )}
