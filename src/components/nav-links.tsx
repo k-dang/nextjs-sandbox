@@ -9,50 +9,7 @@ import {
   SidebarMenuSubItem,
   SidebarMenuSubButton,
 } from "./ui/sidebar";
-
-interface NavItem {
-  title: string;
-  url: string;
-}
-
-export interface NavSection {
-  title: string;
-  url: string;
-  items?: NavItem[];
-}
-
-export interface NavData {
-  navMain: NavSection[];
-}
-
-export const navData: NavData = {
-  navMain: [
-    {
-      title: "Getting Started",
-      url: "/",
-      items: [
-        {
-          title: "PPR",
-          url: "/ppr",
-        },
-        {
-          title: "Dashboard",
-          url: "/dashboard",
-        },
-      ],
-    },
-    {
-      title: "Building Your Application",
-      url: "/build",
-      items: [
-        {
-          title: "Routing",
-          url: "/build/routing",
-        },
-      ],
-    },
-  ],
-};
+import { navData } from "../lib/navigation";
 
 export function NavLinks() {
   const pathname = usePathname();

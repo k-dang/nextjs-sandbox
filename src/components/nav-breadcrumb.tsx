@@ -9,7 +9,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "./ui/breadcrumb";
-import { navData, NavSection } from "./nav-links";
+import { navData, NavSection } from "../lib/navigation";
 
 function findBreadCrumb(navMain: NavSection[], path: string) {
   for (const nav of navMain) {
