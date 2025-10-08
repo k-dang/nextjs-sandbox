@@ -1,5 +1,6 @@
 import { Suspense } from "react";
-import DataCard from "@/components/ppr-card";
+import DataCard from "@/components/data-card";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export const experimental_ppr = true;
 
@@ -9,21 +10,14 @@ export default async function Page() {
       <h1 className="text-2xl">Partial Prerendering</h1>
       <p>
         Current running theory is that adding a suspense boundary around a
-        component will cause it to be rendered dynamically.
+        component will cause it to be rendered dynamically. Is there an issue
+        with PPR?
       </p>
-      <Suspense fallback={<Skeleton />}>
+      <p>DataCard should always be dynamic data now</p>
+      <Suspense fallback={<Skeleton className="h-24" />}>
         <DataCard />
       </Suspense>
       <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
-    </div>
-  );
-}
-
-function Skeleton() {
-  return (
-    <div className="grid auto-rows-min gap-4 md:grid-cols-2">
-      <div className="bg-muted/50 aspect-video rounded-xl animate-pulse" />
-      <div className="bg-muted/50 aspect-video rounded-xl animate-pulse" />
     </div>
   );
 }

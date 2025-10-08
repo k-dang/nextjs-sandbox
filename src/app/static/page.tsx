@@ -1,4 +1,4 @@
-import DataCard from "@/components/ppr-card";
+import { DataCardStatic } from "@/components/data-card";
 
 export default function Page() {
   return (
@@ -8,7 +8,7 @@ export default function Page() {
         Is the content from DataCard rendered on the server and is it gonna stay
         static?
       </p>
-      <DataCard />
+      <DataCardStatic />
     </div>
   );
 }
