@@ -24,10 +24,6 @@ export const navData: NavData = {
           url: "/static",
         },
         {
-          title: "PPR",
-          url: "/ppr",
-        },
-        {
           title: "Dashboard",
           url: "/dashboard",
         },
