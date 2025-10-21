@@ -20,12 +20,12 @@ export const navData: NavData = {
       url: "/",
       items: [
         {
-          title: "Static",
+          title: "Static Rendering",
           url: "/static",
         },
         {
-          title: "Dashboard",
-          url: "/dashboard",
+          title: "Dynamic Rendering",
+          url: "/dynamic",
         },
       ],
     },
