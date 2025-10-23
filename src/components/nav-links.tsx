@@ -19,7 +19,7 @@ export function NavLinks() {
       {navData.navMain.map((item) => (
         <SidebarMenuItem key={item.title}>
           <SidebarMenuButton asChild>
-            <Link href={item.url} prefetch={false} className="font-medium">
+            <Link href={item.url} prefetch={true} className="font-medium">
               {item.title}
             </Link>
           </SidebarMenuButton>
@@ -31,7 +31,7 @@ export function NavLinks() {
                     asChild
                     isActive={pathname === item.url}
                   >
-                    <Link href={item.url} prefetch={false}>
+                    <Link href={item.url} prefetch={true}>
                       {item.title}
                     </Link>
                   </SidebarMenuSubButton>

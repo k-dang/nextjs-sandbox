@@ -1,9 +1,8 @@
 import { DataCardStatic } from "@/components/data-card";
-import PokemonCard from "@/components/pokemon-card";
-import { getRandomPokemon } from "@/db";
+import PokemonGrid from "@/components/pokemon-card";
 
 export default async function Page() {
-  const pokemon = await getRandomPokemon(12);
+  "use cache";
 
   return (
     <div className="flex flex-1 flex-col gap-4 p-4">
@@ -13,11 +12,7 @@ export default async function Page() {
         displays them. Content is rendered on the server and is cached to serve
         the same results for each request.
       </p>
-      <div className="grid grid-cols-3 gap-4">
-        {pokemon.map((p) => (
-          <PokemonCard key={p.id} pokemon={p} />
-        ))}
-      </div>
+      <PokemonGrid />
       <DataCardStatic />
     </div>
   );

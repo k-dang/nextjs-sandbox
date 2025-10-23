@@ -1,22 +1,19 @@
 import DataCard from "@/components/data-card";
-import PokemonCard from "@/components/pokemon-card";
-import { getRandomPokemon } from "@/db";
+import PokemonGrid from "@/components/pokemon-card";
+import { Suspense } from "react";
 
-export default async function Page() {
-  const pokemon = await getRandomPokemon(12);
+export default function Page() {
   return (
     <div className="flex flex-1 flex-col gap-4 p-4">
       <h1 className="text-2xl">Dynamic Rendering</h1>
       <p>
         This page features dynamic rendering, meaning the content is re-rendered
-        on each request.
+        on each request. Content will be different on each request.
       </p>
-      <div className="grid grid-cols-3 gap-4">
-        {pokemon.map((p) => (
-          <PokemonCard key={p.id} pokemon={p} />
-        ))}
-      </div>
-      <DataCard />
+      <Suspense fallback={<div>Loading...</div>}>
+        <PokemonGrid />
+        <DataCard />
+      </Suspense>
     </div>
   );
 }

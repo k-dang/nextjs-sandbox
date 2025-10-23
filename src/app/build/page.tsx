@@ -5,7 +5,6 @@ export default function Page() {
       <p className="font-sans">
         This section is about building your application.
       </p>
-      <p>This section is about building your application.</p>
     </div>
   );
 }
