@@ -1,12 +1,8 @@
 import { getRandomPokemon } from "@/db";
 import { Pokemon } from "@/db/schema";
-import { cacheLife } from "next/cache";
 import Image from "next/image";
 
 export default async function PokemonGrid() {
-  "use cache";
-  cacheLife("max");
-
   const pokemon = await getRandomPokemon(12);
 
   return (
