@@ -2,7 +2,7 @@ import { DataCardStatic } from "@/components/data-card";
 import PokemonGrid from "@/components/pokemon-card";
 import { cacheLife } from "next/cache";
 
-export default function Page() {
+export default async function Page() {
   "use cache";
   cacheLife("max");
 
