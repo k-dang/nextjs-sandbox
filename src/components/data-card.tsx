@@ -1,7 +1,7 @@
 import { getData } from "@/lib/data";
 import { headers } from "next/headers";
 
-export default async function DataCard() {
+export async function DataCard() {
   const headersList = await headers();
   const userAgent = headersList.get("user-agent");
 
