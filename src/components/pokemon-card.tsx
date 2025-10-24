@@ -17,8 +17,9 @@ export default async function PokemonGrid() {
             alt={p.name}
             width={46}
             height={46}
+            unoptimized
           />
-          <p>{p.name}</p>
+          <p className="text-sm text-muted-foreground">{p.name}</p>
         </div>
       ))}
     </div>

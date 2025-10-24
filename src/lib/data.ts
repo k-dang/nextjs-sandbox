@@ -1,6 +1,5 @@
 export async function getData() {
-  console.log("Fetching data...");
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 100));
 
   return {
     data: `Random data: ${Math.random().toString(36).substring(7)}`,
