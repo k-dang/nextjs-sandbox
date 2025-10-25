@@ -1,5 +1,4 @@
 import { DataCard } from "@/components/data-card";
-import PokemonGridCopy from "@/components/pokemon-card-copy";
 import { Suspense } from "react";
 
 export default function Page() {
@@ -11,7 +10,6 @@ export default function Page() {
         on each request. Content will be different on each request.
       </p>
       <Suspense fallback={<div>Loading...</div>}>
-        <PokemonGridCopy />
         <DataCard />
       </Suspense>
     </div>
