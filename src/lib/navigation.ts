@@ -1,6 +1,7 @@
 interface NavItem {
   title: string;
   url: string;
+  isActive?: boolean;
 }
 
 export interface NavSection {
@@ -16,16 +17,17 @@ export interface NavData {
 export const navData: NavData = {
   navMain: [
     {
-      title: "Getting Started",
-      url: "/",
+      title: "Dashboard",
+      url: "/dashboard",
       items: [
         {
           title: "Static Rendering",
-          url: "/static",
+          url: "/dashboard/static",
+          isActive: true,
         },
         {
           title: "Dynamic Rendering",
-          url: "/dynamic",
+          url: "/dashboard/dynamic",
         },
       ],
     },
