@@ -33,11 +33,11 @@ export const navData: NavData = {
     },
     {
       title: "Building Your Application",
-      url: "/build",
+      url: "/dashboard/build",
       items: [
         {
           title: "Routing",
-          url: "/build/routing",
+          url: "/dashboard/build/routing",
         },
       ],
     },
