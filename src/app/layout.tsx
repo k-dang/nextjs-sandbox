@@ -32,7 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`dark ${geistSans.className}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`dark ${geistSans.className}`}
+      suppressHydrationWarning
+    >
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -42,19 +46,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SidebarProvider>
-            <AppSidebar />
-            <SidebarInset>
-              <header className="flex h-16 shrink-0 items-center gap-2 border-b">
-                <div className="flex items-center gap-2 px-3">
-                  <SidebarTrigger />
-                  <Separator orientation="vertical" className="mr-2 h-4" />
-                  <NavBreadcrumb />
-                </div>
-              </header>
-              <div className="p-4">{children}</div>
-            </SidebarInset>
-          </SidebarProvider>
+          <div>{children}</div>
         </ThemeProvider>
       </body>
     </html>
