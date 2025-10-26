@@ -56,7 +56,7 @@ export default function RootLayout({
                   <NavBreadcrumb />
                 </div>
               </header>
-              {children}
+              <div className="p-4">{children}</div>
             </SidebarInset>
           </SidebarProvider>
         </ThemeProvider>
