@@ -7,7 +7,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 
-export function DashboardLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
