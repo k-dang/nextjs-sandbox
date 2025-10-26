@@ -4,7 +4,7 @@ import { Suspense } from "react";
 
 export default function Page() {
   return (
-    <div className="flex flex-col gap-4 max-w-2xl mx-auto">
+    <div className="flex flex-col gap-4">
       <h1 className="text-2xl">Dynamic Rendering</h1>
       <p>
         This page features dynamic rendering, meaning the content is re-rendered

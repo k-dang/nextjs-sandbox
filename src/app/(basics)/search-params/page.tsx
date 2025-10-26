@@ -9,7 +9,7 @@ export default async function Page({
   const term = (await searchParams)?.term;
 
   return (
-    <div className="max-w-2xl mx-auto space-y-4">
+    <div className="space-y-4">
       <h1 className="text-2xl">Search Params</h1>
       <p>
         This page is a server component that uses search params via the{" "}
@@ -23,7 +23,7 @@ export default async function Page({
 
       <div>
         <h2 className="text-lg font-semibold mb-3">Try the Search Input</h2>
-        <SearchInput placeholder="Search for something..." />
+        <SearchInput />
       </div>
 
       {term && (

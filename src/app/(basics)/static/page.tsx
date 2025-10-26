@@ -6,7 +6,7 @@ export default async function Page() {
   cacheLife("max");
 
   return (
-    <div className="flex flex-col gap-4 max-w-2xl mx-auto">
+    <div className="flex flex-col gap-4">
       <h1 className="text-2xl">Static Rendering</h1>
       <p>
         This page features cached content, the content is generated once and

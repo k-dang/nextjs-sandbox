@@ -56,7 +56,7 @@ export default function RootLayout({
                   <NavBreadcrumb />
                 </div>
               </header>
-              <div className="p-4 w-full">{children}</div>
+              <div className="p-4 w-full max-w-4xl">{children}</div>
             </SidebarInset>
           </SidebarProvider>
         </ThemeProvider>
