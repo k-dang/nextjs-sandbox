@@ -6,7 +6,7 @@ export default async function PokemonList() {
   const pokemon = await getRandomPokemon(12);
 
   return (
-    <div className="w-full grid grid-cols-4 gap-4">
+    <div className="grid grid-cols-6 gap-4">
       {pokemon.map((pokemon) => (
         <PokemonCard
           key={pokemon.id}

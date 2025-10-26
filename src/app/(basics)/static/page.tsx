@@ -6,16 +6,14 @@ export default async function Page() {
   cacheLife("max");
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 max-w-2xl mx-auto">
       <h1 className="text-2xl">Static Rendering</h1>
       <p>
         This page features cached content, the content is generated once and
         then cached. This means the content will be the same on each request
         while the page is cached.
       </p>
-      <div className="flex items-center justify-center max-w-2xl mx-auto">
-        <PokemonList />
-      </div>
+      <PokemonList />
     </div>
   );
 }

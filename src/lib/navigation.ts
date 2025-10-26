@@ -17,13 +17,16 @@ export interface NavData {
 export const navData: NavData = {
   navMain: [
     {
-      title: "Dashboard",
+      title: "Basics",
       url: "/",
       items: [
         {
+          title: "Search Params",
+          url: "/search-params",
+        },
+        {
           title: "Static Rendering",
           url: "/static",
-          isActive: true,
         },
         {
           title: "Dynamic Rendering",
@@ -31,5 +34,15 @@ export const navData: NavData = {
         },
       ],
     },
+    {
+      title: "Auth",
+      url: "/auth",
+      items: [
+        {
+          title: "Clerk",
+          url: "/clerk",
+        }
+      ]
+    }
   ],
 };
