@@ -18,28 +18,28 @@ export const navData: NavData = {
   navMain: [
     {
       title: "Dashboard",
-      url: "/dashboard",
+      url: "/",
       items: [
         {
           title: "Static Rendering",
-          url: "/dashboard/static",
+          url: "/static",
           isActive: true,
         },
         {
           title: "Dynamic Rendering",
-          url: "/dashboard/dynamic",
+          url: "/dynamic",
         },
       ],
     },
-    {
-      title: "Building Your Application",
-      url: "/dashboard/build",
-      items: [
-        {
-          title: "Routing",
-          url: "/dashboard/build/routing",
-        },
-      ],
-    },
+    // {
+    //   title: "Building Your Application",
+    //   url: "/dashboard/build",
+    //   items: [
+    //     {
+    //       title: "Routing",
+    //       url: "/dashboard/build/routing",
+    //     },
+    //   ],
+    // },
   ],
 };
