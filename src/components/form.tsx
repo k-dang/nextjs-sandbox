@@ -29,13 +29,7 @@ export function Form() {
           </Button>
         </form>
 
-        <Button
-          type="button"
-          onClick={deleteAllPosts}
-          disabled={pending}
-          className="w-24"
-        >
-          {pending && <Spinner />}
+        <Button type="button" onClick={deleteAllPosts} className="w-24">
           Delete All
         </Button>
       </div>
