@@ -21,16 +21,20 @@ export const navData: NavData = {
       url: "/",
       items: [
         {
-          title: "Search Params",
-          url: "/search-params",
-        },
-        {
           title: "Static Rendering",
           url: "/static",
         },
         {
           title: "Dynamic Rendering",
           url: "/dynamic",
+        },
+        {
+          title: "Search Params",
+          url: "/search-params",
+        },
+        {
+          title: "Server Actions",
+          url: "/server-actions",
         },
       ],
     },
@@ -41,8 +45,8 @@ export const navData: NavData = {
         {
           title: "Clerk",
           url: "/clerk",
-        }
-      ]
-    }
+        },
+      ],
+    },
   ],
 };
