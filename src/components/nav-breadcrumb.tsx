@@ -35,7 +35,7 @@ export function NavBreadcrumb() {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem className="hidden md:block">
-          <BreadcrumbLink href="/dashboard">{parent}</BreadcrumbLink>
+          <BreadcrumbLink href="/">{parent}</BreadcrumbLink>
         </BreadcrumbItem>
         {child != null && (
           <>

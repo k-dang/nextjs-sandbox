@@ -31,15 +31,5 @@ export const navData: NavData = {
         },
       ],
     },
-    // {
-    //   title: "Building Your Application",
-    //   url: "/dashboard/build",
-    //   items: [
-    //     {
-    //       title: "Routing",
-    //       url: "/dashboard/build/routing",
-    //     },
-    //   ],
-    // },
   ],
 };
