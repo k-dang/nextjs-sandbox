@@ -1,5 +1,5 @@
 import { getRandomPokemon } from "@/db";
-import PokemonCard from "./pokemon-card";
+import PokemonCard from "@/components/pokemon-card";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default async function PokemonList() {
