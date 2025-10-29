@@ -43,8 +43,12 @@ export const navData: NavData = {
       url: "/auth",
       items: [
         {
-          title: "Clerk",
+          title: "Clerk Authenticated Page",
           url: "/clerk",
+        },
+        {
+          title: "Clerk Sign In",
+          url: "/clerk/sign-in",
         },
       ],
     },
