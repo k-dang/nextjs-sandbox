@@ -1,22 +1,16 @@
 import { SignedIn } from "@clerk/nextjs";
-
 import { auth, currentUser } from "@clerk/nextjs/server";
-
 import { UserButton } from "@clerk/nextjs";
-import Link from "next/link";
 import { UserData } from "@/components/user-data-client";
 import { InlineCode } from "@/components/typography/inline-code";
 import { UserDataButton } from "@/components/user-data-button";
+import { ClerkGate } from "./clerk-gate";
 
 export default async function Page() {
   const { isAuthenticated, getToken } = await auth();
 
   if (!isAuthenticated) {
-    return (
-      <div>
-        Sign in to view this page <Link href="/clerk/sign-in">Sign in</Link>
-      </div>
-    );
+    return <ClerkGate />;
   }
 
   const user = await currentUser();
