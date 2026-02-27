@@ -1,5 +1,7 @@
+"use client";
+
 import "./clerk-gate.css";
-import Link from "next/link";
+import { useSignIn } from "@clerk/nextjs";
 import { Cormorant_Garamond } from "next/font/google";
 
 const cormorant = Cormorant_Garamond({
@@ -10,6 +12,16 @@ const cormorant = Cormorant_Garamond({
 });
 
 export function ClerkGate() {
+  const { signIn } = useSignIn();
+
+  const handleSignIn = () => {
+    signIn?.authenticateWithRedirect({
+      strategy: "oauth_google",
+      redirectUrl: "/clerk/sign-in",
+      redirectUrlComplete: "/clerk",
+    });
+  };
+
   return (
     <div className={cormorant.variable}>
       <div className="gate-grid relative flex items-center justify-center min-h-[calc(100svh-9rem)] px-6 py-16">
@@ -49,12 +61,12 @@ export function ClerkGate() {
             Sign in to access your exclusive content and features.
           </p>
 
-          <Link
-            href="/clerk/sign-in"
-            className="gate-cta anim-cta opacity-0 relative inline-block overflow-hidden font-mono text-[0.68rem] tracking-[0.25em] uppercase text-[#C9955C] border border-[rgba(201,149,92,0.55)] px-11 py-[0.9rem] transition-[color,border-color] duration-300 ease-in-out hover:text-[#0a0a0a] hover:border-[#C9955C]"
+          <button
+            onClick={handleSignIn}
+            className="gate-cta anim-cta opacity-0 relative inline-block overflow-hidden font-mono text-[0.68rem] tracking-[0.25em] uppercase text-[#C9955C] border border-[rgba(201,149,92,0.55)] px-11 py-[0.9rem] transition-[color,border-color] duration-300 ease-in-out hover:text-[#0a0a0a] hover:border-[#C9955C] cursor-pointer bg-transparent"
           >
             <span className="relative z-10">Sign In to Continue</span>
-          </Link>
+          </button>
 
           <p className="anim-footnote opacity-0 font-mono text-[0.58rem] tracking-[0.22em] text-[#2C2520] uppercase mt-12">
             Protected by Clerk Authentication
